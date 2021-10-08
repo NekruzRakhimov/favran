@@ -1,23 +1,23 @@
 package db
 
 import (
-	"fmt"
-	"github.com/NekruzRakhimov/favran/utils"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 	"log"
+	"os"
 )
 
 var database *gorm.DB
 
 func initDB() *gorm.DB {
-	settingParams := utils.AppSettings.PostgresParams
+	//settingParams := utils.AppSettings.PostgresParams
 
-	connString := fmt.Sprintf("host=%s port=%d user=%s dbname=%s password=%s sslmode=disable",
-		settingParams.Server, settingParams.Port,
-		settingParams.User, settingParams.DataBase,
-		settingParams.Password)
+	//connString := fmt.Sprintf("host=%s port=%d user=%s dbname=%s password=%s sslmode=disable",
+	//	settingParams.Server, settingParams.Port,
+	//	settingParams.User, settingParams.DataBase,
+	//	settingParams.Password)
 
+	connString := os.Getenv("DATABASE_URL")
 	db, err := gorm.Open("postgres", connString)
 
 	if err != nil {
