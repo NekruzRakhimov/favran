@@ -6,10 +6,10 @@
     "log_file": "./logs/gin.log"
   },
   "postgres_params": {
-    "server": "127.0.0.1",
+    "server": "ec2-18-211-194-36.compute-1.amazonaws.com",
     "port": 5432,
-    "user": "postgres",
-    "password": "nekruzroot",
-    "database": "favran"
+    "user": "pgctqboegpuivz",
+    "password": "c1a01517355ed8abe344c3549e94a4a2be769574edb8fc999a06681b9c5f3248",
+    "database": "d4i3v7l2ee28vb"
   }
 }

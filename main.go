@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/NekruzRakhimov/favran/db"
 	"github.com/NekruzRakhimov/favran/routes"
 	"github.com/NekruzRakhimov/favran/utils"
 )
@@ -8,7 +9,7 @@ import (
 func main() {
 	utils.ReadSettings()
 
-	//db.StartDbConnection()
+	db.StartDbConnection()
 
 	routes.InitAllRoutes()
 }
