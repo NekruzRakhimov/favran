@@ -192,3 +192,12 @@ func Search(c *gin.Context) {
 
 	c.JSON(http.StatusOK, gin.H{"goods": goods})
 }
+
+func GetSocialMedias (c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{
+		"telegram": "https://t.me/NekruzR",
+		"instagram": "https://www.instagram.com/unhacked_hacker/",
+		"whatsapp": "https://wa.me/992918302018",
+		"number": "+992917575250",
+	})
+}

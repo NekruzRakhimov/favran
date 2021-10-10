@@ -25,6 +25,8 @@ func runAllRoutes(r *gin.Engine) {
 	r.POST("/view/:good_id", controller.AddViewToTheGood)
 
 	r.GET("/images/:id", controller.GetGoodInfo)
+
+	r.GET("/socials", controller.GetSocialMedias)
 }
 
 // PingPong Проверка
