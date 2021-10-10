@@ -128,7 +128,7 @@ func GetImage(c *gin.Context) {
 
 	//c.Writer.Header().Add("Content-Disposition", fmt.Sprintf("attachment; filename =% s", filename)) // fmt.Sprintf ("attachment; filename =% s", filename) Переименуйте загруженный файл
 	//c.Writer.Header().Add("Content-Type", "application/octet-stream")
-	c.Header("Content-Type", "image/png")
+	//c.Header("Content-Type", "image/png")
 	c.File(filePath)
 }
 
